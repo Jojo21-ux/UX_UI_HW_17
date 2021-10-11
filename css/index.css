@@ -1,0 +1,298 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+
+
+
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        
+
+    }
+
+
+    body,
+    html {
+        height: 100%;
+        width: 100%;
+    }
+
+
+
+    .Navbar {
+
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        height: 45px;
+        background-color: white;
+        border: solid 0.5px white;
+        align-items: center;
+        margin-top: 1rem;
+       
+    }
+
+
+    #logo {
+       
+        grid-column-start: 2;
+        cursor: pointer;
+        justify-content: center;
+
+
+    }
+
+    #portfolio {
+        grid-column: span 1;
+        grid-column-start: -5;
+        grid-column-end: -6;
+        align-items: center;
+        cursor: pointer;
+
+    }
+
+    #about {
+
+        grid-column: span 1;
+        grid-column-start: -5;
+        grid-column-end: -4;
+        align-items: center;
+        cursor: pointer;
+
+    }
+
+
+    #resume {
+
+        grid-column: span 1;
+        grid-column-start: -4;
+        grid-column-end: -3;
+        align-items: center;
+        cursor: pointer;
+
+
+
+    }
+ 
+
+    main {
+        height: 72vh;
+        margin: 2rem 12vw;
+        background: url("../images/jojoemoji.jpeg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 12%;
+        transition: 800ms;
+        animation: bg-in 2650ms forwards;
+    }
+
+    @keyframes bg-in {
+        100% {
+            background-size: 50%;
+        }
+    }
+
+
+
+    main .rail {
+        width: 420px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .rail>* {
+        flex-grow: 1;
+    }
+
+
+    .case-study {
+        background-color: white;
+        box-shadow: 0px 1px 16px rgba(0, 0, 0, .12);
+        margin: 4rem;
+        border-radius: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+   #cs1 {
+        background: url("../images/miniworkstile.png");
+        background-size: cover;
+        transform: translate(-5%, 0);
+        box-shadow: 2px 15px 30px rgba(22, 70, 155, 0.12);
+        opacity: 0;
+        animation: cs1-in 2600ms forwards;
+        cursor: pointer;
+        
+    }
+
+    #cs1:hover {
+
+        background: url("../images/MINIWORKShover.png");
+        background-size: cover;
+        box-shadow: 2px 5px 35px rgba(250, 4, 98, 0.781);
+    }
+
+    @keyframes cs1-in {
+        100% {
+            transform: translate(120%, -6%);
+            opacity: 100%;
+        }
+    }
+
+
+    #cs2 {
+        background: url("../images/CERtile.png");
+        background-size: cover;
+        opacity: 0;
+        box-shadow: 2px 15px 30px rgba(22, 70, 155, 0.12);
+        transform: translate(5%, 0);
+        animation: cs2-in 2600ms forwards;
+        cursor: pointer;
+
+    }
+
+
+    #cs2:hover {
+
+        background: url("../images/CERhover.png");
+        background-size: cover;
+        box-shadow: 2px 5px 35px rgb(32, 173, 255);
+      
+    }
+
+    @keyframes cs2-in {
+        100% {
+            transform: translate(-130%, 12%);
+            opacity: 100%;
+        }
+    }
+
+
+
+    #cs3 {
+        background: url("../images/StreetLibtile.png");
+        background-size: cover;
+        opacity: 0;
+        box-shadow: 2px 15px 30px rgba(22, 70, 155, 0.12);
+        transform: translate(5%, 0);
+        animation: cs3-in 2600ms forwards;
+        cursor: pointer;
+
+      
+    }
+
+    @keyframes cs3-in {
+        100% {
+            transform: translate(100%, 18%);
+            opacity: 100%;
+        }
+    }
+
+   
+    .intro   {
+        display: flex;
+        font-size: 35px;
+        align-items: center;
+        justify-content: center;
+        height: 6vh;
+        position: relative;
+      
+    }
+
+
+    .rail .wrapper {
+    display: flex;
+
+    }
+
+    .rail .wrapper > * {
+    flex-grow: 1;
+    
+    }
+
+    #cs1-wrap {
+
+        animation: cs1-wrap-float 2200ms linear infinite;
+    }
+    
+@keyframes cs1-wrap-float {
+
+    0% {
+        transform: translate(0%, 0%);
+    }
+
+    50% {
+        transform: translate(0.5%, 1%);
+    }
+
+    75% {
+        transform: translate(-0.5%, 1%);
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+    }
+
+}
+
+
+
+#cs2-wrap {
+
+    animation: cs1-wrap-float 2800ms linear infinite;
+}
+
+
+@keyframes cs2-wrap-float {
+
+0% {
+    transform: translate(0%, 0%);
+}
+
+50% {
+    transform: translate(1%, 0.5%);
+}
+
+75% {
+    transform: translate(-1%, 0.5%);
+}
+
+100% {
+    transform: translate(0%, 0%);
+}
+
+}
+
+
+#cs3-wrap {
+
+    animation: cs1-wrap-float 2800ms linear infinite;
+}
+
+
+@keyframes cs3-wrap-float {
+
+0% {
+    transform: translate(0%, 0%);
+}
+
+50% {
+    transform: translate(0.5%, 1%);
+}
+
+75% {
+    transform: translate(-0.5%, 1%);
+}
+
+100% {
+    transform: translate(0%, 0%);
+}
+
+}
