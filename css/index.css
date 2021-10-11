@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
 
 
 
@@ -36,10 +37,13 @@
 
 
     #logo {
-       
+        grid-column: span 2;
         grid-column-start: 2;
         cursor: pointer;
         justify-content: center;
+        align-items: center;
+        font-family: 'Nothing You Could Do', cursive;
+        font-size: 25px;
 
 
     }
@@ -76,7 +80,6 @@
 
     }
  
-
     main {
         height: 72vh;
         margin: 2rem 12vw;
@@ -121,18 +124,18 @@
 
 
 
-   #cs1 {
+   #c1 {
         background: url("../images/miniworkstile.png");
         background-size: cover;
         transform: translate(-5%, 0);
         box-shadow: 2px 15px 30px rgba(22, 70, 155, 0.12);
         opacity: 0;
-        animation: cs1-in 2600ms forwards;
+        animation: cs1-in 2400ms 2600ms forwards;
         cursor: pointer;
         
     }
 
-    #cs1:hover {
+    #c1:hover {
 
         background: url("../images/MINIWORKShover.png");
         background-size: cover;
@@ -147,19 +150,19 @@
     }
 
 
-    #cs2 {
+    #c2 {
         background: url("../images/CERtile.png");
         background-size: cover;
         opacity: 0;
         box-shadow: 2px 15px 30px rgba(22, 70, 155, 0.12);
         transform: translate(5%, 0);
-        animation: cs2-in 2600ms forwards;
+        animation: cs2-in 2400ms 2600ms forwards;
         cursor: pointer;
 
     }
 
 
-    #cs2:hover {
+    #c2:hover {
 
         background: url("../images/CERhover.png");
         background-size: cover;
@@ -176,13 +179,13 @@
 
 
 
-    #cs3 {
+    #c3 {
         background: url("../images/StreetLibtile.png");
         background-size: cover;
         opacity: 0;
         box-shadow: 2px 15px 30px rgba(22, 70, 155, 0.12);
         transform: translate(5%, 0);
-        animation: cs3-in 2600ms forwards;
+        animation: cs3-in 2400ms 2600ms forwards;
         cursor: pointer;
 
       
@@ -217,7 +220,7 @@
     
     }
 
-    #cs1-wrap {
+    #card1-wrap {
 
         animation: cs1-wrap-float 2200ms linear infinite;
     }
@@ -244,7 +247,7 @@
 
 
 
-#cs2-wrap {
+#card2-wrap {
 
     animation: cs1-wrap-float 2800ms linear infinite;
 }
@@ -271,7 +274,7 @@
 }
 
 
-#cs3-wrap {
+#card3-wrap {
 
     animation: cs1-wrap-float 2800ms linear infinite;
 }
@@ -296,3 +299,206 @@
 }
 
 }
+
+
+
+
+    .magictext  {
+        display: flex;
+        font-size: 35px;
+        align-items: center;
+        justify-content: center;
+        height: 6vh;
+        position: relative;
+        overflow:hidden;
+        white-space:nowrap;
+      }
+
+      .magiccue {
+        display: flex;
+        font-size: 35px;
+        align-items: center;
+        justify-content: center;
+        height: 6vh;
+        position: relative;
+      }
+      
+      .magictext:first-of-type {    /* For increasing performance 
+                             ID/Class should've been used. 
+                             For a small demo 
+                             it's okaish for now */
+        animation: showup 4s forwards;
+      }
+      
+      .magiccue:last-of-type {
+        animation: reveal 6s forwards;
+      }
+      
+      .magiccue:last-of-type span {
+        animation: slidein 4s forwards;
+        opacity: 0;      }
+      
+        @keyframes showup {
+            0% {opacity:0;}
+            20% {opacity:1;}
+            80% {opacity:1;}
+            100% {opacity:0;}
+        }
+
+   
+        @keyframes slidein {
+            0% { margin-left:-625px; }
+            20% { margin-left:-625px; }
+            35% { margin-left:0px; opacity: 0; }
+            100% { margin-left: 0px; opacity: 1;}
+        }
+
+      @keyframes reveal {
+          0% {opacity:0;width:0px;}
+          20% {opacity:1;width:0px;}
+          30% {width:625px;}
+          80% {opacity:1;}
+          100% {opacity:0;width:625px;}
+      }
+      
+      
+      
+      
+
+    .magictext2  {
+        display: flex;
+        font-size: 35px;
+        align-items: center;
+        justify-content: center;
+        height: 6vh;
+        position: relative;
+        overflow:hidden;
+        white-space:nowrap;
+      }
+
+      .magiccue2 {
+        display: flex;
+        font-size: 35px;
+        align-items: center;
+        justify-content: center;
+        height: 6vh;
+        position: relative;
+      }
+      
+      .magictext2:first-of-type {    /* For increasing performance 
+                             ID/Class should've been used. 
+                             For a small demo 
+                             it's okaish for now */
+        animation: showup2 6s forwards;
+      }
+      
+      .magiccue2:last-of-type {
+        width:0px;
+        animation: reveal2 7s forwards;
+      }
+      
+      .magiccue2:last-of-type span {
+        animation: slidein2   9s   forwards;
+        opacity: 0;      }
+      
+        @keyframes showup2 {
+            0% {opacity:0 ;}
+            20% {opacity:1;}
+            80% {opacity:1 ;}
+            100% {opacity:0 ;}
+        }
+
+   
+        @keyframes slidein2 {
+            0% { margin-left:-625px; }
+            20% { margin-left:-625px; }
+            35% { margin-left:0px; opacity: 0; }
+            100% { margin-left: 0px; opacity: 1;}
+        }
+
+      @keyframes reveal2 {
+          0% {opacity:0;width:0px;}
+          20% {opacity:1;width:0px;}
+          30% {width:625px;}
+          80% {opacity:1;}
+          100% {opacity:0;width:625px;}
+      }
+      
+      
+      
+      .magictext3  {
+        display: flex;
+        font-size: 35px;
+        align-items: center;
+        justify-content: center;
+        height: 6vh;
+        position: relative;
+        overflow:hidden;
+        white-space:nowrap;
+      }
+
+      .magiccue3 {
+        display: flex;
+        font-size: 35px;
+        align-items: center;
+        justify-content: center;
+        height: 6vh;
+        position: relative;
+      }
+      
+      .magictext3:first-of-type {    /* For increasing performance 
+                             ID/Class should've been used. 
+                             For a small demo 
+                             it's okaish for now */
+        animation: showup3  13.2s   forwards;
+      }
+      
+      .magiccue3:last-of-type {
+        width:0px;
+        animation: reveal3  13.2s  forwards;
+      }
+      
+      .magiccue3:last-of-type span {
+        margin-left:-155px;
+        animation: slidein3  13.2s  forwards;
+        opacity: 0;      }
+      
+      @keyframes showup3 {
+          0% {opacity:0;}
+          1% {opacity:1;}
+          80% {opacity:1;}
+          100% {opacity:0;}
+      }
+      
+      @keyframes slidein3 {
+          0% { margin-left:-625px; }
+          1% { margin-left:-625px; }
+          35% { margin-left:0px; opacity: 0; }
+          100% { margin-left: 0px; opacity: 1;}
+      }
+      
+      @keyframes reveal3 {
+          0% {opacity:0;width:0px;}
+          1% {opacity:1;width:0px;}
+          30% {width:625px;}
+          80% {opacity:1;}
+          100% {opacity:1;width:625px;}
+      }
+      
+      
+      p {
+        font-size:12px;
+        color:#999;
+        margin-top:200px;
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
